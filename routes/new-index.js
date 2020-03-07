@@ -4,7 +4,7 @@ var router = express.Router();
 
 router.get('/', (req, res, next) => {
 	console.log("got request");
-	res.json('{"a show": 9.4, "b show": 8.5}');
+	res.json('["A show", "B show"]');
 });
 
 module.exports = router;
