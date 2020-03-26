@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import "./App.css";
 import axios from "axios";
-import { BrowserRouter, Switch, Route,
-  //  Link
-   } from "react-router-dom";
-import {Login,Registration,Logout,CreateOrJoinSimulation,JoinTheSimulation,JoiningError,SimulationLibrary,SimulationLobby,PassiveParticipator,ActiveParticipator,ManagerStartSimulation,ManagerSimulationInAction} from './components'
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Login, Registration, Logout, CreateOrJoinSimulation, JoinTheSimulation, JoiningError, SimulationLibrary, SimulationLobby, PassiveParticipator, ActiveParticipator, ManagerStartSimulation, ManagerSimulationInAction } from './components/components'
 
 class App extends Component {
   url = "/api";
@@ -28,7 +26,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <p>Hello Nathan Krasney</p>
+        <p><b>EDUSIM</b> Get Started ! ! !</p>
         <button onClick={this.clickHandler}>Access express server !!!!!</button>
         <p>Got : {this.state.data}</p>
       
