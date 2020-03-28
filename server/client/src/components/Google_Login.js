@@ -1,7 +1,7 @@
 import React from "react";
 import { GoogleLogin } from "react-google-login-component";
 
-class Google_Login extends React.Component {
+export default class Google_Login extends React.Component {
   constructor (props, context) {
     super(props, context);
   }
@@ -28,4 +28,3 @@ class Google_Login extends React.Component {
     );
   }
 }
-export default Google_Login;

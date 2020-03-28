@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
 import axios from "axios";
-import Google_Login from "./components/Google_Login";
 
 class App extends Component {
   url = "/api";
@@ -28,7 +27,6 @@ class App extends Component {
         <p>Hello Nathan Krasney</p>
         <button onClick={this.clickHandler}>Access express server !!!!!</button>
         <p>Got : {this.state.data}</p>
-        <Google_Login/>
       </div>
     );
   }
