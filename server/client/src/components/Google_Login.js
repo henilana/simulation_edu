@@ -7,8 +7,8 @@ class Google_Login extends React.Component {
   }
  
   responseGoogle (googleUser) {
-    var id_token = googleUser.getAuthResponse().id_token;
-    var googleId = googleUser.getId();
+    let id_token = googleUser.getAuthResponse().id_token;
+    let googleId = googleUser.getId();
     
     console.log({ googleId });
     console.log({accessToken: id_token});

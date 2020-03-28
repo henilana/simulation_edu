@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import axios from "axios";
-import Google_Login from "./Google_Login";
+import Google_Login from "./components/Google_Login";
 
 class App extends Component {
   url = "/api";
