@@ -7,16 +7,19 @@ function Simulation(props) {
             {/* ------------------------desktop--------------------- */}
             <br/>
             <div className='SimulationExtrnal'>
-                <span className="circle circleTime">{simulationsList.time}</span>
-                <span className="circle circleParticipants">{simulationsList.participants}</span>
+                <span className="circle circleTime">{simulationsList.time} זמן</span>
+                <span className="circle circleParticipants">{simulationsList.participants} שחקנים</span>
                 <div className='Simulation'>
                     <span className="SumulationName">{simulationsList.name}</span><br/>
                     <span>{simulationsList.desc}</span>
                     
                 </div>
                 <div  className='SimulationButton'>
-                    <span >התחל</span>  
+                    <span >פירוט</span>
                 </div>
+                <div  className='SimulationButton2'>
+                    <span >בחר</span>
+                </div>                
             </div>
             {/* ------------------------tablet--------------------- */}
             {/* <br/>

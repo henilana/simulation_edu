@@ -22,8 +22,8 @@
     font-weight: bold;
 }
 .circle{
-    width:25px;
-    height: 25px;
+    width:36px;
+    height: 30px;
     margin-top: -25px;
     background:white;
     border-radius:  50%;  
@@ -45,6 +45,15 @@
     border-radius:  10px;  
     width: 65px;
     margin-left: 1050px;
+    padding: 3px;
+}
+.SimulationButton2{
+    background-color: white;
+    margin: auto;
+    margin-top: -27px;
+    border-radius:  10px;  
+    width: 65px;
+    margin-left: 950px;
     padding: 3px;
 }
 /* tablet */
@@ -85,6 +94,15 @@
     margin-left: 250px;
     padding: 3px;
 }
+.SimulationButton2Tablet{
+    background-color: white;
+    margin: auto;
+    margin-top: -10px;
+    border-radius:  10px;  
+    width: 65px;
+    margin-left: 200px;
+    padding: 3px;
+}
 /* phone */
 /* ---------------------------------- */
 .SimulationPhone{
@@ -121,5 +139,14 @@
     border-radius:  10px;  
     width: 65px;
     margin-left: 250px;
+    padding: 3px;
+}
+.SimulationButton2Phone{
+    background-color: white;
+    margin: auto;
+    margin-top: -10px;
+    border-radius:  10px;  
+    width: 65px;
+    margin-left: 200px;
     padding: 3px;
 }
