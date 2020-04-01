@@ -6,7 +6,6 @@ export default class Login extends Component {
         return (
             <div>
                 <Google_Login/>
-
             </div>
         )
     }
