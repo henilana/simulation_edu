@@ -34,7 +34,6 @@ class App extends Component {
 
       <BrowserRouter>
       <div className="App">
-        <br></br>
 
         <p>Hello Nathan Krasney</p>
         <button onClick={this.clickHandler}>Access express server !!!!!</button>
