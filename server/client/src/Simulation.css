@@ -1,10 +1,7 @@
-/* desktop */
-/* ---------------------------------- */
 .Simulation{
     background-color: rgb(144, 188, 224);
-    /* width: 430px; */
+    width: 94vw;
     margin: auto;
-    width: 98%;
     padding: 10px; 
     border-radius: 25px;   
     text-align: right;
@@ -12,9 +9,7 @@
 
 }
 .SimulationExtrnal{
-    /* width: 430px; */
     margin: auto;
-    /* width: 99%; */
     padding: 10px; 
 }
 .SumulationName{
@@ -22,8 +17,8 @@
     font-weight: bold;
 }
 .circle{
-    width:36px;
-    height: 30px;
+    width:3vw;
+    height: 5vh;
     margin-top: -25px;
     background:white;
     border-radius:  50%;  
@@ -31,12 +26,12 @@
     padding: 10px 7px 7px 7px;
 }
 .circleTime{
-    margin-left:170px;
+    margin-left:7vw;
     float: left;
 }
 .circleParticipants{
     float: left;
-    margin-left: 20px;
+    margin-left: 2vw;
 }
 .SimulationButton{
     background-color: white;
@@ -44,7 +39,7 @@
     margin-top: -10px;
     border-radius:  10px;  
     width: 65px;
-    margin-left: 1050px;
+    margin-left: 78vw;
     padding: 3px;
 }
 .SimulationButton2{
@@ -53,100 +48,6 @@
     margin-top: -27px;
     border-radius:  10px;  
     width: 65px;
-    margin-left: 950px;
-    padding: 3px;
-}
-/* tablet */
-/* ---------------------------------- */
-.SimulationTablet{
-    background-color: rgb(144, 188, 224);
-    width: 370px;
-    /* margin: auto;
-    width: 58%; */
-    padding: 10px; 
-    border-radius: 25px;   
-    text-align: right;
-    margin-top:-10px;
-}
-.circleTablet{
-    width:25px;
-    height: 25px;
-    margin-top: -25px;
-    background:white;
-    border-radius:  50%;  
-    font-size: small;
-    padding: 10px 7px 7px 7px;
-}
-.circleTimeTablet{
-    margin-left:40px;
-    float: left;
-}
-.circleParticipantsTablet{
-    float: left;
-    margin-left: 20px;
-}
-.SimulationButtonTablet{
-    background-color: white;
-    margin: auto;
-    margin-top: -10px;
-    border-radius:  10px;  
-    width: 65px;
-    margin-left: 250px;
-    padding: 3px;
-}
-.SimulationButton2Tablet{
-    background-color: white;
-    margin: auto;
-    margin-top: -10px;
-    border-radius:  10px;  
-    width: 65px;
-    margin-left: 200px;
-    padding: 3px;
-}
-/* phone */
-/* ---------------------------------- */
-.SimulationPhone{
-    background-color: rgb(144, 188, 224);
-    width: 370px;
-    /* margin: auto;
-    width: 58%; */
-    padding: 10px; 
-    border-radius: 25px;   
-    text-align: right;
-    margin-top:-10px;
-}
-.circlePhone{
-    width:25px;
-    height: 25px;
-    margin-top: -25px;
-    background:white;
-    border-radius:  50%;  
-    font-size: small;
-    padding: 10px 7px 7px 7px;
-}
-.circleTimePhone{
-    margin-left:40px;
-    float: left;
-}
-.circleParticipantsPhone{
-    float: left;
-    margin-left: 20px;
-}
-.SimulationButtonPhone{
-    background-color: white;
-    margin: auto;
-    margin-top: -10px;
-    border-radius:  10px;  
-    width: 65px;
-    margin-left: 250px;
-    padding: 3px;
-}
-.SimulationButton2Phone{
-    background-color: white;
-    margin: auto;
-    margin-top: -10px;
-    border-radius:  10px;  
-    width: 65px;
-    margin-left: 200px;
+    margin-left: 70vw;
     padding: 3px;
 }
