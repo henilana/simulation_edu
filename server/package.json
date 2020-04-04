@@ -21,8 +21,7 @@
   },
   "homepage": "https://github.com/NathanKr/ExpressAndReactSimple#readme",
   "dependencies": {
-    "express": "^4.16.4",
-    "node-sass": "^4.13.1"
+    "express": "^4.16.4"
   },
   "devDependencies": {
     "concurrently": "^5.0.2"
