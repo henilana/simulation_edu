@@ -3,16 +3,21 @@ import { BrowserRouter , Switch, Route} from 'react-router-dom';
 import "./App.css";
 import axios from "axios";
 import SimulationLibrary from './SimulationLibrary';
+import Simulation from './Simulation';
 
 class App extends Component {
   url = "/api";
-  state = { simulationsList:[{ID:1,name:'aaaaa',
+  state = { simulationID:0,simulationsList:[{ID:1,name:'aaaaa',
   
     desc:' Duis nisi exercitation et commodo reprehenderit minim irure pariatur exercitation anim laboris do ut ea. Est sit est voluptate sunt fugiat ut incididunt et minim anim aliquip veniam laboris.Ex laborum enim sit pariatur velit esse et ea in do duis consequat excepteur. Duis adipisicing anim duis laboris est do dolore veniam ad duis consectetur dolor laborum. Aute magna Lorem adipisicing culpa fugiat ullamco quis proident proident ullamco id ea non cupidatat. Sunt deserunt aliqua quis ex proident nulla excepteur tempor sit. Enim voluptate id sit consequat nostrud officia.  ',time:'1:30',participants:10},
     {ID:2,name:'bbbbbb',
     desc:' Duis nisi exercitation et commodo reprehenderit minim irure pariatur exercitation anim laboris do ut ea. Est sit est voluptate sunt fugiat ut incididunt et minim anim aliquip veniam laboris.Ex laborum enim sit pariatur velit esse et ea in do duis consequat excepteur. Duis adipisicing anim duis laboris est do dolore veniam ad duis consectetur dolor laborum. Aute magna Lorem adipisicing culpa fugiat ullamco quis proident proident ullamco id ea non cupidatat. Sunt deserunt aliqua quis ex proident nulla excepteur tempor sit. Enim voluptate id sit consequat nostrud officia.  ',time:'2:00',participants:4},
     {ID:3,name:'cccccc',
     desc:' Duis nisi exercitation et commodo reprehenderit minim irure pariatur exercitation anim laboris do ut ea.  Est sit est voluptate sunt fugiat ut incididunt et minim anim aliquip veniam laboris.Ex laborum enim sit pariatur velit esse et ea in do duis consequat excepteur. Duis adipisicing anim duis laboris est do dolore veniam ad duis consectetur dolor laborum. Aute magna Lorem adipisicing culpa fugiat ullamco quis proident proident ullamco id ea non cupidatat. Sunt deserunt aliqua quis ex proident nulla excepteur tempor sit. Enim voluptate id sit consequat nostrud officia. ',time:'3:30',participants:3}] };
+
+  setsimulationNum = simulationID =>{
+    this.setState({simulationID:simulationID});
+  };
 
   clickHandler = () => {
     console.log("clicked");
@@ -37,18 +42,13 @@ class App extends Component {
 
         <p>Hello Nathan Krasney</p>
         <button onClick={this.clickHandler}>Access express server !!!!!</button>
-        <p>Got : {this.state.data}</p>        
-
+        <p>Got : {this.state.data}</p>  
+            
         <Switch>
-        
-          <Route exact path='/' render = {() => <SimulationLibrary simulationsList = {this.state.simulationsList}/> }/>
-          {/* <Route exact path='/Simulation' render={() => <Simulation simulationsList = {this.simulationsList} />} />  */}
+          <Route exact path='/' render = {() => <SimulationLibrary simulationsList = {this.state.simulationsList} setsimulationNum = {this.setsimulationNum}/> }/>         
+          <Route exact path='/Simulation' render={() => <Simulation simulationsList = {this.state.simulationsList} simulationID = {this.state.simulationID} scereenName={'Details'}/>} /> 
           {/* <Route  component={NotFound}/> */}
         </Switch>        
-
-             
-        {/* <Button>ClickMe</Button>
-        <Button variant="primary">Primary</Button>         */}
       </div>
       </BrowserRouter>
 
