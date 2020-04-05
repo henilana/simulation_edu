@@ -40,11 +40,6 @@ class App extends Component {
 
       <BrowserRouter>
       <div className="App">
-
-        <p>Hello Nathan Krasney</p>
-        <button onClick={this.clickHandler}>Access express server !!!!!</button>
-        <p>Got : {this.state.data}</p>  
-            
         <Switch>
           <Route exact path='/' render = {() => <SimulationLibrary simulationsList = {this.simulationsList} setsimulationNum = {this.setsimulationNum}/> }/>         
           <Route exact path='/Simulation' render={() => <Simulation simulationsList = {this.simulationsList} simulationID = {this.state.simulationID} scereenName={'Details'}/>} /> 
