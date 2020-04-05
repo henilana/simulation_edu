@@ -31,7 +31,7 @@ class Simulation extends Component {
                 <div className='SimulationExtrnal'>
                     <span className="circle circleTime">{simulationsList.time} זמן</span>
                     <span className="circle circleParticipants">{simulationsList.participants} שחקנים</span>
-                    <div className='Simulation' style={{height: this.props.scereenName ==='Details' ? '70vh' : ''}}> 
+                    <div className='Simulation' style={{height: this.props.scereenName ==='Details' ? '88vh' : ''}}> 
                         <span className="SumulationName">{simulationsList.name}</span><br/>
                         <span>{simulationsList.desc}</span>
                         
@@ -53,7 +53,7 @@ class Simulation extends Component {
             return <Redirect to = '/Simulation' />
         } 
         if(this.state.RedirectToSimulationsList){
-            return <Redirect to = '/' />
+            return <Redirect to = '/SimulationLibrary' />
         }               
         return (
             <div className={this.state.divClassName}>

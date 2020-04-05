@@ -41,7 +41,7 @@ class App extends Component {
       <BrowserRouter>
       <div className="App">
         <Switch>
-          <Route exact path='/' render = {() => <SimulationLibrary simulationsList = {this.simulationsList} setsimulationNum = {this.setsimulationNum}/> }/>         
+          <Route exact path='/SimulationLibrary' render = {() => <SimulationLibrary simulationsList = {this.simulationsList} setsimulationNum = {this.setsimulationNum}/> }/>         
           <Route exact path='/Simulation' render={() => <Simulation simulationsList = {this.simulationsList} simulationID = {this.state.simulationID} scereenName={'Details'}/>} /> 
           {/* <Route  component={NotFound}/> */}
         </Switch>        
