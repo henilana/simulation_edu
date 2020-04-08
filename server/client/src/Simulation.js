@@ -29,11 +29,11 @@ class Simulation extends Component {
             <div key={index} >
                 <br/>
                 <div className='SimulationExtrnal'>
-                    <span className="circle circleTime">{simulationsList.time} זמן</span>
-                    <span className="circle circleParticipants">{simulationsList.participants} שחקנים</span>
+                    <span className="circle circleTime">{simulationsList.Time} זמן</span>
+                    <span className="circle circleParticipants">{simulationsList.Participants} שחקנים</span>
                     <div className='Simulation' style={{height: this.props.scereenName ==='Details' ? '88vh' : ''}}> 
-                        <span className="SumulationName">{simulationsList.name}</span><br/>
-                        <span>{simulationsList.desc}</span>
+                        <span className="SumulationName">{simulationsList.Name}</span><br/>
+                        <span>{simulationsList.Desc}</span>
                         
                     </div>
                     <div  className='SimulationButton'>

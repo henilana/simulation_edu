@@ -12,7 +12,6 @@ class SimulationLibrary extends Component {
 
     constructor(props) {
         super(props);
-        console.log(this.props,'props');
     };
     componentWillUnmount() {
         this.props.setsimulationNum(this.state.simulationID);
