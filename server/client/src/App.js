@@ -1,7 +1,8 @@
 import React, { Component } from "react";
-import { BrowserRouter , Switch, Route} from 'react-router-dom';
 import "./App.css";
 import axios from "axios";
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Login, Registration, Logout, CreateOrJoinSimulation, JoinTheSimulation, JoiningError, SimulationLobby, PassiveParticipator, ActiveParticipator, ManagerStartSimulation, ManagerSimulationInAction } from './components/components'
 import SimulationLibrary from './SimulationLibrary';
 import Simulation from './Simulation';
 
@@ -41,8 +42,19 @@ class App extends Component {
       <BrowserRouter>
       <div className="App">
         <Switch>
+          <Route exact path='/Login' component={Login} />
+          <Route exact path='/Registration' component={Registration} />
+          <Route exact path='/Logout' component={Logout} />
+          <Route exact path='/CreateOrJoinSimulation' component={CreateOrJoinSimulation} />
+          <Route exact path='/JoinTheSimulation' component={JoinTheSimulation} />
+          <Route exact path='/JoiningError' component={JoiningError} />
           <Route exact path='/SimulationLibrary' render = {() => <SimulationLibrary simulationsList = {this.simulationsList} setsimulationNum = {this.setsimulationNum}/> }/>         
           <Route exact path='/Simulation' render={() => <Simulation simulationsList = {this.simulationsList} simulationID = {this.state.simulationID} scereenName={'Details'}/>} /> 
+          <Route exact path='/SimulationLobby' component={SimulationLobby} />
+          <Route exact path='/PassiveParticipator' component={PassiveParticipator} />
+          <Route exact path='/ActiveParticipator' component={ActiveParticipator} />
+          <Route exact path='/ManagerStartSimulation' component={ManagerStartSimulation} />
+          <Route exact path='/ManagerSimulationInAction' component={ManagerSimulationInAction} />          
           {/* <Route  component={NotFound}/> */}
         </Switch>        
       </div>
