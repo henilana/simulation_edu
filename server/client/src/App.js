@@ -38,9 +38,12 @@ class App extends Component {
 
   render() {
     return (
-
-      <BrowserRouter>
       <div className="App">
+      <BrowserRouter>
+        <p><b>EDUSIM</b> Get Started ! ! !</p>
+        <button onClick={this.clickHandler}>Access express server !!!!!</button>
+        <p>Got : {this.state.data}</p>  
+
         <Switch>
           <Route exact path='/Login' component={Login} />
           <Route exact path='/Registration' component={Registration} />
@@ -57,8 +60,8 @@ class App extends Component {
           <Route exact path='/ManagerSimulationInAction' component={ManagerSimulationInAction} />          
           {/* <Route  component={NotFound}/> */}
         </Switch>        
-      </div>
       </BrowserRouter>
+      </div>
 
     );
   }
