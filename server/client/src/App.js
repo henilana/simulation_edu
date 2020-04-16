@@ -39,11 +39,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-      <BrowserRouter>
+      
         <p><b>EDUSIM</b> Get Started ! ! !</p>
         <button onClick={this.clickHandler}>Access express server !!!!!</button>
-        <p>Got : {this.state.data}</p>  
-
+        <p>Got : {this.state.data}</p> 
+         
+        <BrowserRouter>
         <Switch>
           <Route exact path='/Login' component={Login} />
           <Route exact path='/Registration' component={Registration} />
