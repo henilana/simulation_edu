@@ -4,17 +4,17 @@ import "./SimulationLibrary.css";
 
 class SimulationLibrary extends Component {
 
-    state={windowWidth:'',simulationID:0};
+    state={selectedSimulationID:0};
 
-    setsimulationID = (simulationID) =>{
-        this.setState({simulationID:simulationID});
+    setsimulationID = (selectedSimulationID) =>{
+        this.setState({selectedSimulationID:selectedSimulationID});
     };
 
     constructor(props) {
         super(props);
     };
     componentWillUnmount() {
-        this.props.setsimulationNum(this.state.simulationID);
+        this.props.setsimulationNum(this.state.selectedSimulationID);
     };
     
     render() {

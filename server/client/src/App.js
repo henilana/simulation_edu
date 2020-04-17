@@ -8,10 +8,10 @@ import Simulation from './Simulation';
 
 class App extends Component {
   url = "/api";
-  state = { simulationID:0};
+  state = { selectedSimulationID:0};
 
-  setsimulationNum = simulationID =>{
-    this.setState({simulationID:simulationID});
+  setsimulationNum = selectedSimulationID =>{
+    this.setState({selectedSimulationID:selectedSimulationID});
   };
 
   simulationsList = [{ID:1,Name:'aaaaa',
@@ -43,7 +43,7 @@ class App extends Component {
         <p><b>EDUSIM</b> Get Started ! ! !</p>
         <button onClick={this.clickHandler}>Access express server !!!!!</button>
         <p>Got : {this.state.data}</p> 
-         
+
         <BrowserRouter>
         <Switch>
           <Route exact path='/Login' component={Login} />
@@ -53,7 +53,7 @@ class App extends Component {
           <Route exact path='/JoinTheSimulation' component={JoinTheSimulation} />
           <Route exact path='/JoiningError' component={JoiningError} />
           <Route exact path='/SimulationLibrary' render = {() => <SimulationLibrary simulationsList = {this.simulationsList} setsimulationNum = {this.setsimulationNum}/> }/>         
-          <Route exact path='/Simulation' render={() => <Simulation simulationsList = {this.simulationsList} simulationID = {this.state.simulationID} scereenName={'Details'}/>} /> 
+          <Route exact path='/Simulation' render={() => <Simulation simulationsList = {this.simulationsList} simulationID = {this.state.selectedSimulationID} scereenName={'Details'}/>} /> 
           <Route exact path='/SimulationLobby' component={SimulationLobby} />
           <Route exact path='/PassiveParticipator' component={PassiveParticipator} />
           <Route exact path='/ActiveParticipator' component={ActiveParticipator} />
