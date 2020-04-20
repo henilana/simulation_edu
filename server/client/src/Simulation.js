@@ -7,8 +7,8 @@ class Simulation extends Component {
     constructor(props) {
         super(props);
     };
-    goToSimulationDetails = (ID) =>{
-        this.props.setsimulationID(ID);
+    goToSimulationDetails = (index) =>{
+        this.props.setsimulationIndex(index);
         this.setState({RedirectToSimulationDetails:true});
     } ; 
     goToSimulationsList = () =>{
@@ -23,32 +23,6 @@ class Simulation extends Component {
         }        
     };         
     render() {    
-        const element = this.props.simulationsList.map ( (simulationsList,index) =>(
-            this.props.scereenName ==='Library' || (this.props.simulationID === simulationsList.ID && this.props.scereenName ==='Details') ?
-            
-            <div key={index} >
-                <br/>
-                <div className='SimulationExtrnal'>
-                    <span className="circle circleTime">{simulationsList.Time} זמן</span>
-                    <span className="circle circleParticipants">{simulationsList.Participants} שחקנים</span>
-                    <div className='Simulation' style={{height: this.props.scereenName ==='Details' ? '88vh' : ''}}> 
-                        <span className="SumulationName">{simulationsList.Name}</span><br/>
-                        <span>{simulationsList.Desc}</span>
-                        
-                    </div>
-                    <div  className='SimulationButton'>
-                        {this.props.scereenName ==='Library' ? 
-                            <span onClick ={() => this.goToSimulationDetails(simulationsList.ID)}>פירוט</span> : 
-                            <span >בחירה</span>}
-                    </div>
-                    <div  className='SimulationButton2'>
-                        {this.props.scereenName ==='Library' ? 
-                            <span >בחר</span> :
-                            <span onClick ={this.goToSimulationsList}>חזרה</span>}
-                    </div>                
-                </div>
-            </div> : ''))
-
         if(this.state.RedirectToSimulationDetails){
             return <Redirect to = '/Simulation' />
         } 
@@ -57,7 +31,27 @@ class Simulation extends Component {
         }               
         return (
             <div className={this.state.divClassName}>
-               {element}
+               {/* {element} */}
+               <br/>
+                <div className='SimulationExtrnal'>
+                    <span className="circle circleTime">{this.props.simulationsList.Time} זמן</span>
+                    <span className="circle circleParticipants">{this.props.simulationsList.Participants} שחקנים</span>
+                    <div className='Simulation' style={{height: this.props.scereenName ==='Details' ? '88vh' : ''}}> 
+                        <span className="SumulationName">{this.props.simulationsList.Name}</span><br/>
+                        <span>{this.props.simulationsList.Desc}</span>
+                        
+                    </div>
+                    <div  className='SimulationButton'>
+                        {this.props.scereenName ==='Library' ? 
+                            <span onClick ={() => this.goToSimulationDetails(this.props.selectedIndex)}>פירוט</span> : 
+                            <span >בחירה</span>}
+                    </div>
+                    <div  className='SimulationButton2'>
+                        {this.props.scereenName ==='Library' ? 
+                            <span >בחר</span> :
+                            <span onClick ={this.goToSimulationsList}>חזרה</span>}
+                    </div>                
+                </div>               
             </div>
         );
     }

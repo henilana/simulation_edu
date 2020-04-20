@@ -4,25 +4,29 @@ import "./SimulationLibrary.css";
 
 class SimulationLibrary extends Component {
 
-    state={selectedSimulationID:0};
+    state={selectedSimulationIndex:0};
 
-    setsimulationID = (selectedSimulationID) =>{
-        this.setState({selectedSimulationID:selectedSimulationID});
+    setsimulationIndex = (index) =>{
+        this.setState({selectedSimulationIndex:index});
     };
 
     constructor(props) {
         super(props);
     };
     componentWillUnmount() {
-        this.props.setsimulationNum(this.state.selectedSimulationID);
+        this.props.setsimulationNum(this.state.selectedSimulationIndex);
     };
     
     render() {
+        const element = this.props.simulationsList.map ( (simulationsList,index) =>(
+            <div key={index} >
+                <Simulation simulationsList = {simulationsList} setsimulationIndex = {this.setsimulationIndex} selectedIndex = {index} scereenName={'Library'}/>
+            </div> ))        
         return (
         
             <div className='SimulationLibrary'>
                 <p> הקמת סימולציה </p> 
-                <Simulation simulationsList = {this.props.simulationsList} setsimulationID = {this.setsimulationID} scereenName={'Library'}/>
+                {element}
             </div>
           
         );

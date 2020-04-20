@@ -9,10 +9,10 @@ import Simulation from './Simulation';
 
 class App extends Component {
   url = "/api";
-  state = { selectedSimulationID:0};
+  state = { selectedSimulationIndex:0};
 
-  setsimulationNum = selectedSimulationID =>{
-    this.setState({selectedSimulationID:selectedSimulationID});
+  setsimulationNum = selectedSimulationIndex =>{
+    this.setState({selectedSimulationIndex:selectedSimulationIndex});
   };
 
   simulationsList = [{ID:1,Name:'aaaaa',
@@ -54,7 +54,7 @@ class App extends Component {
           <Route exact path='/JoinTheSimulation' component={JoinTheSimulation} />
           <Route exact path='/JoiningError' component={JoiningError} />
           <Route exact path='/SimulationLibrary' render = {() => <SimulationLibrary simulationsList = {this.simulationsList} setsimulationNum = {this.setsimulationNum}/> }/>         
-          <Route exact path='/Simulation' render={() => <Simulation simulationsList = {this.simulationsList} simulationID = {this.state.selectedSimulationID} scereenName={'Details'}/>} /> 
+          <Route exact path='/Simulation' render={() => <Simulation simulationsList = {this.simulationsList[this.state.selectedSimulationIndex]} scereenName={'Details'}/>} /> 
           <Route exact path='/SimulationLobby' component={SimulationLobby} />
           <Route exact path='/PassiveParticipator' component={PassiveParticipator} />
           <Route exact path='/ActiveParticipator' component={ActiveParticipator} />
