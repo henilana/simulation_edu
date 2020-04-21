@@ -2,7 +2,9 @@ import React, { Component } from "react";
 import "./App.css";
 import axios from "axios";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { Login, Registration, Logout, CreateOrJoinSimulation, JoinTheSimulation, JoiningError, SimulationLibrary, SimulationLobby, PassiveParticipator, ActiveParticipator, ManagerStartSimulation, ManagerSimulationInAction } from './components/components'
+import { Login, Registration, Logout, CreateOrJoinSimulation, JoinTheSimulation, JoiningError, SimulationLibrary, SimulationLobby, ActiveParticipator, ManagerStartSimulation } from './components/components'
+import ManagerPassiveSimulation from './components/ManagerPassiveSimulation'
+import PassiveParticipator from './components/PassiveParticipator'
 
 class App extends Component {
   url = "/api";
@@ -44,7 +46,7 @@ class App extends Component {
     <Route exact path='/PassiveParticipator' component={PassiveParticipator} />
     <Route exact path='/ActiveParticipator' component={ActiveParticipator} />
     <Route exact path='/ManagerStartSimulation' component={ManagerStartSimulation} />
-    <Route exact path='/ManagerSimulationInAction' component={ManagerSimulationInAction} />
+    <Route exact path='/ManagerPassiveSimulation' component={ManagerPassiveSimulation} />
 </Switch>
 </BrowserRouter>
 
