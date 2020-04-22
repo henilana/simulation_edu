@@ -2,7 +2,7 @@
     background-color: rgb(144, 188, 224);
     width: 94vw;
     margin: auto;
-    padding: 10px; 
+    padding: 0.9vw; 
     border-radius: 25px;   
     text-align: right;
     margin-top:-10px;
@@ -28,6 +28,7 @@
 .circleTime{
     margin-left:7vw;
     float: left;
+    font-size: small;
 }
 .circleParticipants{
     float: left;
@@ -38,7 +39,7 @@
     margin: auto;
     margin-top: -10px;
     border-radius:  10px;  
-    width: 65px;
+    width: 6vw;
     margin-left: 78vw;
     padding: 3px;
 }
@@ -47,7 +48,7 @@
     margin: auto;
     margin-top: -27px;
     border-radius:  10px;  
-    width: 65px;
+    width: 6vw;
     margin-left: 70vw;
     padding: 3px;
 }
