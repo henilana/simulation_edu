@@ -1,12 +1,12 @@
 import React from 'react';
 
-function SubHeader(){
+function SubHeader(props){
     return(
             <div>
-            <p> <br/> </p>
+                <p>{props.title}<br/>{props.title}</p>
             <br/>
-            <h1></h1>
+                <h1>{props.SubTitle}</h1>
             </div>
-    )
+            )
 }
 export default SubHeader;

@@ -1,15 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-function Button() {
+function Button(props) {
     return(
         <div className="button-container">
-        <div class="row">
-        <a href="https://github.com/garageil/simulation_edu/pull/7" class="rounded-0 p-3 col-4 btn btn-primary btn-lg">הרשמה</a>
-        </div>
-        <br/>
-        <div class="row">
-        <a href="https://github.com/garageil/simulation_edu/pull/7" class="rounded-0 p-3 col-4 btn btn-primary btn-lg">התחברות</a>
-        </div>
+           <div class="row">
+              <Link to={props.link} class="rounded-0 p-3 col-4 btn btn-primary btn-lg">{props.ButtonName}</Link>
+           </div>
         </div>
     )
 }
