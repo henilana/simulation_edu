@@ -19,7 +19,6 @@ export class CreateOrJoinSimulation extends Component {
     return (
       <div className="CreateOrJoinSimulation">
       {this.state.goTo?<Redirect to={`/${this.state.goTo}`}  />:""}
-        {/* <h1>כניסה לסימולציה</h1> */}
         <MainHeader text="כניסה לסימולציה"/>
          <p> מנהל? צור סימולציה חדשה</p>{" "}
         <p>משתתף? הצטרף לסימולציה קיימת</p>{" "}
