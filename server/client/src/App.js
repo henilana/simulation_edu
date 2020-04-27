@@ -2,19 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import axios from "axios";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import {
-  Login,
-  Registration,
-  Logout,
-  JoinTheSimulation,
-  JoiningError,
-  SimulationLibrary,
-  SimulationLobby,
-  PassiveParticipator,
-  ActiveParticipator,
-  ManagerStartSimulation,
-  ManagerSimulationInAction,
-} from "./components/components";
+import { Login, Registration, Logout, JoinTheSimulation, JoiningError, SimulationLibrary, SimulationLobby, PassiveParticipator, ActiveParticipator, ManagerStartSimulation,  ManagerSimulationInAction,} from "./components/components";
 import { CreateOrJoinSimulation } from "./components/CreateOrJoinSimulation";
 class App extends Component {
   url = "/api";
@@ -38,9 +26,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <p>
-          <b>EDUSIM</b> Get Started ! ! !
-        </p>
+        <p> <b>EDUSIM</b> Get Started ! ! ! </p>
         <button onClick={this.clickHandler}>Access express server !!!!!</button>
         <p>Got : {this.state.data}</p>
 
@@ -49,43 +35,15 @@ class App extends Component {
             <Route exact path="/Login" component={Login} />
             <Route exact path="/Registration" component={Registration} />
             <Route exact path="/Logout" component={Logout} />
-            <Route
-              exact
-              path="/CreateOrJoinSimulation"
-              component={CreateOrJoinSimulation}
-            />
-            <Route
-              exact
-              path="/JoinTheSimulation"
-              component={JoinTheSimulation}
-            />
+            <Route exact path="/CreateOrJoinSimulation" component={CreateOrJoinSimulation}/>
+            <Route exact path="/JoinTheSimulation" component={JoinTheSimulation}/>
             <Route exact path="/JoiningError" component={JoiningError} />
-            <Route
-              exact
-              path="/SimulationLibrary"
-              component={SimulationLibrary}
-            />
+            <Route exact path="/SimulationLibrary" component={SimulationLibrary} />
             <Route exact path="/SimulationLobby" component={SimulationLobby} />
-            <Route
-              exact
-              path="/PassiveParticipator"
-              component={PassiveParticipator}
-            />
-            <Route
-              exact
-              path="/ActiveParticipator"
-              component={ActiveParticipator}
-            />
-            <Route
-              exact
-              path="/ManagerStartSimulation"
-              component={ManagerStartSimulation}
-            />
-            <Route
-              exact
-              path="/ManagerSimulationInAction"
-              component={ManagerSimulationInAction}
-            />
+            <Route exact path="/PassiveParticipator" component={PassiveParticipator} />
+            <Route exact path="/ActiveParticipator" component={ActiveParticipator} />
+            <Route exact path="/ManagerStartSimulation" component={ManagerStartSimulation} />
+            <Route exact path="/ManagerSimulationInAction" component={ManagerSimulationInAction}/>
           </Switch>
         </BrowserRouter>
       </div>

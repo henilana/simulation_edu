@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import  { Redirect } from 'react-router-dom'
-
+import  { Redirect } from 'react-router-dom';
+import MainButton from "./MainButton";
+import MainHeader from "./MainHeader";
 import "./CreateOrJoinSimulation.css";
 export class CreateOrJoinSimulation extends Component {
   state={goTo:""}
@@ -18,11 +19,14 @@ export class CreateOrJoinSimulation extends Component {
     return (
       <div className="CreateOrJoinSimulation">
       {this.state.goTo?<Redirect to={`/${this.state.goTo}`}  />:""}
-        <h1>כניסה לסימולציה</h1> <p> מנהל? צור סימולציה חדשה</p>{" "}
+        {/* <h1>כניסה לסימולציה</h1> */}
+        <MainHeader text="כניסה לסימולציה"/>
+         <p> מנהל? צור סימולציה חדשה</p>{" "}
         <p>משתתף? הצטרף לסימולציה קיימת</p>{" "}
-        <button onClick={this.newSimulation} className="btn-style">יצירת סימולציה חדשה</button>
+        <MainButton text="יצירת סימולציה חדשה" fun={this.newSimulation} />
         <br />
-        <button onClick={this.joinSimulation} className="btn-style">הצטרפות לסימולציה קיימת</button>
+        <MainButton text="הצטרפות לסימולציה קיימת" fun={this.joinSimulation} />
+        
       </div>
     );
   }
