@@ -1,12 +1,24 @@
 import React from "react";
 function MainButton(props) {
-    // this button get two params: funcion , text.
-    // call this button everywhere..
+  let btnStyle = {
+    width: "22vw",
+    height: "7vw",
+    fontSize: "2.5vw",
+    color: "white",
+    backgroundColor: "rgb(107, 107, 107)",
+    border: "none",
+  };
+  // this button get two params: funcion , text.
+  // call this button everywhere..
   return (
-    <button className="btn-style"
-    onClick={props.fun}
-    className="btn-style">
-{props.text}    </button>
+    <button
+      className="btn-style"
+      style={btnStyle}
+      onClick={props.fun}
+      className="btn-style"
+    >
+      {props.text}{" "}
+    </button>
   );
 }
 
