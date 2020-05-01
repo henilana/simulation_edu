@@ -1,0 +1,13 @@
+.Cards{
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+.Title{
+  font-size: larger;
+  text-align: center;
+}
+.Texts {
+  font-size: auto;
+  overflow-y: scroll;
+}
