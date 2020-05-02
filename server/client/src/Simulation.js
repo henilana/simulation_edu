@@ -1,55 +1,30 @@
 import React, { Component } from 'react';
-import {Redirect} from 'react-router-dom';
 import "./Simulation.css";
+import Button from './Button';
 
-class Simulation extends Component {    
-    state={RedirectToSimulationDetails:false,divClassName:'',RedirectToSimulationsList:false};
+class Simulation extends Component {   
     constructor(props) {
         super(props);
     };
-    goToSimulationDetails = (index) =>{
-        this.props.setsimulationIndex(index);
-        this.setState({RedirectToSimulationDetails:true});
-    } ; 
-    goToSimulationsList = () =>{
-        this.setState({RedirectToSimulationsList:true});
-    } ;     
-    componentWillMount() {
-        if(this.props.scereenName ==='Details'){
-            this.setState({divClassName:'SimulationLibrary'});
-        } 
-        else{
-            this.setState({divClassName:''});
-        }        
-    };         
+
     render() {    
-        if(this.state.RedirectToSimulationDetails){
-            return <Redirect to = '/Simulation' />
-        } 
-        if(this.state.RedirectToSimulationsList){
-            return <Redirect to = '/SimulationLibrary' />
-        }               
+        const RedirectToSimulationDetails = this.props.button1Link + this.props.selectedIndex ;         
         return (
-            <div className={this.state.divClassName}>
-               {/* {element} */}
+            <div className={this.props.divClassName}>
                <br/>
                 <div className='SimulationExtrnal'>
                     <span className="circle circleTime">{this.props.simulationsList.Time} זמן</span>
                     <span className="circle circleParticipants">{this.props.simulationsList.Participants} שחקנים</span>
-                    <div className='Simulation' style={{height: this.props.scereenName ==='Details' ? '88vh' : ''}}> 
+                    <div className='Simulation' style={{height: this.props.divClassName ==='SimulationLibrary' ? '88vh' : ''}}> 
                         <span className="SumulationName">{this.props.simulationsList.Name}</span><br/>
                         <span>{this.props.simulationsList.Desc}</span>
                         
                     </div>
                     <div  className='SimulationButton'>
-                        {this.props.scereenName ==='Library' ? 
-                            <span onClick ={() => this.goToSimulationDetails(this.props.selectedIndex)}>פירוט</span> : 
-                            <span >בחירה</span>}
+                        <Button link = {RedirectToSimulationDetails} ButtonName = {this.props.button1Name} /> 
                     </div>
                     <div  className='SimulationButton2'>
-                        {this.props.scereenName ==='Library' ? 
-                            <span >בחר</span> :
-                            <span onClick ={this.goToSimulationsList}>חזרה</span>}
+                        <Button link = {this.props.button2Link} ButtonName = {this.props.button2Name} /> 
                     </div>                
                 </div>               
             </div>

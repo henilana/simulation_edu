@@ -9,12 +9,7 @@ import Simulation from './Simulation';
 
 class App extends Component {
   url = "/api";
-  state = { selectedSimulationIndex:0};
-
-  setsimulationNum = selectedSimulationIndex =>{
-    this.setState({selectedSimulationIndex:selectedSimulationIndex});
-  };
-
+  state = {data:''};
   simulationsList = [{ID:1,Name:'aaaaa',
     Desc:' Duis nisi exercitation et commodo reprehenderit minim irure pariatur exercitation anim laboris do ut ea. Est sit est voluptate sunt fugiat ut incididunt et minim anim aliquip veniam laboris.Ex laborum enim sit pariatur velit esse et ea in do duis consequat excepteur. Duis adipisicing anim duis laboris est do dolore veniam ad duis consectetur dolor laborum. Aute magna Lorem adipisicing culpa fugiat ullamco quis proident proident ullamco id ea non cupidatat. Sunt deserunt aliqua quis ex proident nulla excepteur tempor sit. Enim voluptate id sit consequat nostrud officia.  ',Time:'1:30',Participants:10},
     {ID:2,Name:'bbbbbb',
@@ -53,8 +48,11 @@ class App extends Component {
           <Route exact path='/CreateOrJoinSimulation' component={CreateOrJoinSimulation} />
           <Route exact path='/JoinTheSimulation' component={JoinTheSimulation} />
           <Route exact path='/JoiningError' component={JoiningError} />
-          <Route exact path='/SimulationLibrary' render = {() => <SimulationLibrary simulationsList = {this.simulationsList} setsimulationNum = {this.setsimulationNum}/> }/>         
-          <Route exact path='/Simulation' render={() => <Simulation simulationsList = {this.simulationsList[this.state.selectedSimulationIndex]} scereenName={'Details'}/>} /> 
+          <Route exact path='/SimulationLibrary' component = {() => <SimulationLibrary simulationsList = {this.simulationsList} /> }/>         
+          <Route path='/Simulation/:id' component={(props) => <Simulation selectedIndex = {props.match.params.id} 
+                simulationsList = {this.simulationsList[props.match.params.id]} divClassName ={'SimulationLibrary'}
+                button1Link ={'/Simulation/'} button2Link ={'/SimulationLibrary'}
+                button1Name ={'בחירה'} button2Name = {'חזרה'}/>} /> 
           <Route exact path='/SimulationLobby' component={SimulationLobby} />
           <Route exact path='/PassiveParticipator' component={PassiveParticipator} />
           <Route exact path='/ActiveParticipator' component={ActiveParticipator} />

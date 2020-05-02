@@ -10,17 +10,13 @@ class SimulationLibrary extends Component {
         this.setState({selectedSimulationIndex:index});
     };
 
-    constructor(props) {
-        super(props);
-    };
-    componentWillUnmount() {
-        this.props.setsimulationNum(this.state.selectedSimulationIndex);
-    };
-    
     render() {
         const element = this.props.simulationsList.map ( (simulationsList,index) =>(
             <div key={index} >
-                <Simulation simulationsList = {simulationsList} setsimulationIndex = {this.setsimulationIndex} selectedIndex = {index} scereenName={'Library'}/>
+                <Simulation simulationsList = {simulationsList} setsimulationIndex = {this.setsimulationIndex} 
+                    selectedIndex = {index} divClassName = {''} 
+                    button1Link ={'/Simulation/'} button2Link ={'/Simulation/'}
+                    button1Name ={'פירוט'} button2Name = {'בחר'}/>
             </div> ))        
         return (
         
