@@ -6,13 +6,22 @@
     border-radius: 25px;   
     text-align: right;
     margin-top:-10px;
-
+}
+.SimulationDetail{
+    background-color: rgb(144, 188, 224);
+    width: 94vw;
+    height:88vh;
+    margin: auto;
+    padding: 0.9vw; 
+    border-radius: 25px;   
+    text-align: right;
+    margin-top:-10px;
 }
 .SimulationExtrnal{
     margin: auto;
     padding: 10px; 
 }
-.SumulationName{
+.SimulationName{
     font-size: large;
     font-weight: bold;
 }

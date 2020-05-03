@@ -12,15 +12,15 @@ class Simulation extends Component {
         return (
             <div className={this.props.divClassName}>
                <br/>
-                <div className='SimulationExtrnal'>
-                    <span className="circle circleTime">{this.props.simulationsList.Time} זמן</span>
-                    <span className="circle circleParticipants">{this.props.simulationsList.Participants} שחקנים</span>
-                    <div className='Simulation' style={{height: this.props.divClassName ==='SimulationLibrary' ? '88vh' : ''}}> 
-                        <span className="SumulationName">{this.props.simulationsList.Name}</span><br/>
-                        <span>{this.props.simulationsList.Desc}</span>
+                <div className='SimulationExtrnal'> 
+                    <span className="circle circleTime">{this.props.simulation.Time} זמן</span>
+                    <span className="circle circleParticipants">{this.props.simulation.Participants} שחקנים</span>
+                <div className={this.props.SimulationClassName} > 
+                        <span className="SimulationName">{this.props.simulation.Name}</span><br/>
+                        <span>{this.props.simulation.Desc}</span>
                         
                     </div>
-                    <div  className='SimulationButton'>
+                        <div  className='SimulationButton'>
                         <Button link = {RedirectToSimulationDetails} ButtonName = {this.props.button1Name} /> 
                     </div>
                     <div  className='SimulationButton2'>

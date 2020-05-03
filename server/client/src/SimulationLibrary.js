@@ -4,16 +4,10 @@ import "./SimulationLibrary.css";
 
 class SimulationLibrary extends Component {
 
-    state={selectedSimulationIndex:0};
-
-    setsimulationIndex = (index) =>{
-        this.setState({selectedSimulationIndex:index});
-    };
-
     render() {
         const element = this.props.simulationsList.map ( (simulationsList,index) =>(
             <div key={index} >
-                <Simulation simulationsList = {simulationsList} setsimulationIndex = {this.setsimulationIndex} 
+                <Simulation simulation = {simulationsList} SimulationClassName={'Simulation'}
                     selectedIndex = {index} divClassName = {''} 
                     button1Link ={'/Simulation/'} button2Link ={'/Simulation/'}
                     button1Name ={'פירוט'} button2Name = {'בחר'}/>
