@@ -19,7 +19,7 @@ class SimScreen extends Component {
          (this.props.dir==="rtl")? this.direction={  direction:"rtl", textAlign:"right"  }: this.direction={  direction:"ltr", textAlign:"left"  }
         
         return (
-           <Container  >
+           <Container  className="d-flex justify-content-center">
               
                 <Card className="Cards col-lg-4 rounded-lg shadow-lg" border="dark" shadow="lg" rounded="lg"  style={{  width: '100%' }}>
                     
