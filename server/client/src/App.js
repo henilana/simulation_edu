@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import axios from "axios";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Link} from "react-router-dom";
 import { Login, Registration, Logout, CreateOrJoinSimulation, JoinTheSimulation, JoiningError, SimulationLibrary, SimulationLobby, PassiveParticipator, ActiveParticipator, ManagerStartSimulation, ManagerSimulationInAction } from './components/components'
 
 class App extends Component {
@@ -32,6 +32,7 @@ class App extends Component {
       
 
 <BrowserRouter>
+<Link to='/Login'>Login</Link>
 <Switch>
     <Route exact path='/Login' component={Login} />
     <Route exact path='/Registration' component={Registration} />
