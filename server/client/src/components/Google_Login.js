@@ -16,10 +16,11 @@ export default class Google_Login extends React.Component {
   }
 
   render() {
+    const socialId = "484579547170-8lquvdreveesdmrvt3dmo2hfg9nib8g2.apps.googleusercontent.com";
     return (
       <div>
         <GoogleLogin
-          socialId="484579547170-8lquvdreveesdmrvt3dmo2hfg9nib8g2.apps.googleusercontent.com"
+          socialId={socialId}
           className="google-login"
           scope="profile"
           fetchBasicProfile={false}
