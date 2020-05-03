@@ -2,7 +2,8 @@ import React from "react";
 import LoginPage from "../pages/LoginPage";
 
 export const Login = () => <LoginPage/>
-export const Registration = () => <h1>Registration</h1>
+export const input = () => <input type="text" placeholder="שם מלא" ></input>
+export const button = () => <button>הבא</button>
 export const Logout = () => <h1>Logout</h1>
 export const CreateOrJoinSimulation = () => <h1>CreateOrJoinSimulation</h1>
 export const JoinTheSimulation = () => <h1>JoinTheSimulation</h1>

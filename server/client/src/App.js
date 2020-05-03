@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import "./App.css";
 import axios from "axios";
 import { BrowserRouter, Switch, Route, Link} from "react-router-dom";
-import { Login, Registration, Logout, CreateOrJoinSimulation, JoinTheSimulation, JoiningError, SimulationLibrary, SimulationLobby, PassiveParticipator, ActiveParticipator, ManagerStartSimulation, ManagerSimulationInAction } from './components/components'
-
+import { Login, Logout, CreateOrJoinSimulation, JoinTheSimulation, JoiningError, SimulationLibrary, SimulationLobby, PassiveParticipator, ActiveParticipator, ManagerStartSimulation, ManagerSimulationInAction } from './components/components'
+import Registration from './pages/Registration';
 class App extends Component {
   url = "/api";
   state = { data: "" };
