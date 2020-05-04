@@ -1,0 +1,86 @@
+.PassiveParticipatorSimulation .card , .PassiveManagerSimulation .card{
+    min-height: 100vh;
+    height: 100vh;
+    margin: auto;
+    text-align: center;
+    }
+    .PassiveManagerSimulation .GroupId {
+        float: left;
+    }
+    .PassiveParticipatorSimulation .CardTitle , .PassiveManagerSimulation .CardTitle {
+        display: inline-block;
+        margin-bottom: 0;
+    }
+    .PassiveParticipatorSimulation .IconImageTop ,.PassiveParticipatorSimulation .emptyDiv, .PassiveManagerSimulation .IconImageTop, .PassiveManagerSimulation .emptyDiv {
+     margin: auto;
+     float: right;
+    }
+    .PassiveManagerSimulation .BottomOfHeader {
+        display: inline-block;
+        width: 100%;
+    }
+    .PassiveParticipatorSimulation .Timer , .PassiveManagerSimulation .Timer {
+        float: left;
+    }
+    .PassiveParticipatorSimulation .divOfImageCenter , .PassiveManagerSimulation .divOfImageCenter {
+        position: absolute;
+        top: 50vw;
+        bottom: 50vw;
+        right: 0;
+        left: 0;
+        margin: auto;
+        height: 36vh;
+    }
+    .PassiveParticipatorSimulation .IconImageCenter , .PassiveManagerSimulation .IconImageCenter {
+    margin:'auto'
+    }
+    .PassiveParticipatorSimulation .CardText , .PassiveManagerSimulation .CardText {
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+   }
+   .PassiveManagerSimulation .Bottom {
+    margin: auto;
+    position: absolute;
+    right: 0;
+    left: 0;
+   }
+   .PassiveManagerSimulation .leftButton {
+       float: left;
+    }
+   .PassiveManagerSimulation .rightButton {
+     float: right; 
+    }
+/* ********      Responsive     ***********/
+ @media screen and (max-width: 1540px) { 
+    .PassiveParticipatorSimulation .card , .PassiveManagerSimulation .card {width: 65vw;}
+    .PassiveManagerSimulation .GroupId  {padding:0.2vw;border:0.2vw solid black;}
+    .PassiveParticipatorSimulation .IconImageTop , .PassiveManagerSimulation .IconImageTop {width:4vw;height: 4vw;}    
+    .PassiveManagerSimulation .emptyDiv {width:4vw;height: 4vw;}    
+    .PassiveParticipatorSimulation .timer , .PassiveManagerSimulation .timer  {width:4vw;height: 4vw;}    
+    .PassiveParticipatorSimulation .ButtonTop , .PassiveManagerSimulation .ButtonTop {margin-top: 0.9vw;}
+    .PassiveParticipatorSimulation .IconImageCenter , .PassiveManagerSimulation .IconImageCenter {width: 22vw;height: 40vh;}
+    .PassiveManagerSimulation .leftButton {width: 10vw;}
+    .PassiveManagerSimulation .rightButton {width: 10vw;}
+    .PassiveManagerSimulation .BottomOfHeader {margin-top: 0.8vw;}
+    .PassiveParticipatorSimulation .divOfImageCenter , .PassiveManagerSimulation .divOfImageCenter {height: 40vh;}
+    .PassiveParticipatorSimulation .CardText , .PassiveManagerSimulation .CardText {width: 14vw;height: 3vw;margin-top: 1vw;}
+    .PassiveManagerSimulation .Bottom {width: 52vw;bottom: 3vw;}
+}
+@media screen and (max-width: 1030px) { 
+    .PassiveParticipatorSimulation .card , .PassiveManagerSimulation .card {width: 100%;} 
+    .CardTitle{font-size: larger;margin-top: 3vw;}
+    .PassiveManagerSimulation .divGroupId{width: 14vw;height: 14vw;float: left;}
+    .PassiveManagerSimulation .GroupId {font-size: medium;margin-top: 2vw;padding:1vw;border:0.5vw solid black;}
+    .PassiveParticipatorSimulation .ButtonTop , .PassiveManagerSimulation .ButtonTop {font-size: medium; margin-top: 2vw;}
+    .PassiveParticipatorSimulation .IconImageTop , .PassiveManagerSimulation .IconImageTop {width:14vw;height: 14vw;}
+    .PassiveManagerSimulation .emptyDiv {width:14vw;height: 14vw;}
+    .PassiveParticipatorSimulation .timer , .PassiveManagerSimulation .timer {width:14vw;height: 14vw;}
+    .PassiveParticipatorSimulation .IconImageCenter , .PassiveManagerSimulation .IconImageCenter {width: 65vw;height: 65vw;}
+    .PassiveManagerSimulation .BottomOfHeader {margin-top: 3vw;}
+    .PassiveParticipatorSimulation .divOfImageCenter , .PassiveManagerSimulation .divOfImageCenter {height: 36vh;}
+    .PassiveManagerSimulation .leftButton {width: 30vw;}
+    .PassiveManagerSimulation .rightButton {width: 30vw;}
+    .PassiveParticipatorSimulation .CardText , .PassiveManagerSimulation .CardText {width: 52vw;height: 12vw;margin-top: 4vw;font-size: initial;}
+    .PassiveManagerSimulation .Bottom {width: 75vw;bottom: 7vw;}
+  } 
