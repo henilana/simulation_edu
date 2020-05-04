@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import "./App.css";
 import axios from "axios";
+
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { Login, Registration, Logout, CreateOrJoinSimulation, JoinTheSimulation, JoiningError, SimulationLobby, PassiveParticipator, ActiveParticipator, ManagerStartSimulation, ManagerSimulationInAction } from './components/components'
 import SimulationLibrary from './SimulationLibrary';
 import Simulation from './Simulation';
-
 
 class App extends Component {
   url = "/api";
@@ -62,7 +62,6 @@ class App extends Component {
         </Switch>        
       </BrowserRouter>
       </div>
-
     );
   }
 }
