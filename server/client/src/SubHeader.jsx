@@ -3,7 +3,7 @@ import React from 'react';
 function SubHeader(props){
     return(
             <div>
-                <p>{props.SubTitle}</p>
+                <p class="w-25 d-inline-block">{props.SubTitle}</p>
             <br/>
                 <h1>Edusim</h1>
             </div>
