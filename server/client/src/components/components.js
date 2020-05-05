@@ -11,5 +11,4 @@ export const SimulationLobby = () => <h1>SimulationLobby</h1>
 export const PassiveParticipator = () => <h1>PassiveParticipator</h1>
 export const ActiveParticipator = () => <h1>ActiveParticipator</h1>
 export const ManagerStartSimulation = () => <h1>ManagerStartSimulation</h1>
-export const ManagerSimulationInAction = () => <h1>ManagerSimulationInAction</h1> 
-export const LoginSignUp = () => <h1>LoginSignUp</h1>
+export const ManagerSimulationInAction = () => <h1>ManagerSimulationInAction</h1>

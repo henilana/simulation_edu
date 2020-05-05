@@ -3,9 +3,9 @@ import React from 'react';
 function SubHeader(props){
     return(
             <div>
-                <p>{props.title}<br/>{props.title}</p>
+                <p>{props.SubTitle}</p>
             <br/>
-                <h1>{props.SubTitle}</h1>
+                <h1>Edusim</h1>
             </div>
             )
 }

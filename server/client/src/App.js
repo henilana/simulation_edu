@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import "./App.css";
 import axios from "axios";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { Login, Registration, Logout, CreateOrJoinSimulation, JoinTheSimulation, JoiningError, SimulationLibrary, SimulationLobby, PassiveParticipator, ActiveParticipator, ManagerStartSimulation, ManagerSimulationInAction, LoginSignUp } from './components/components'
+import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import { Login, Registration, Logout, CreateOrJoinSimulation, JoinTheSimulation, JoiningError, SimulationLibrary, SimulationLobby, PassiveParticipator, ActiveParticipator, ManagerStartSimulation, ManagerSimulationInAction } from './components/components'
+import LoginSignUp from './LoginSignUp'
 
 class App extends Component {
   url = "/api";
@@ -32,6 +33,7 @@ class App extends Component {
       
 
 <BrowserRouter>
+<Link to="/LoginSignUp">click here to go to LoginSignUp Page!</Link>
 <Switch>
     <Route exact path='/Login' component={Login} />
     <Route exact path='/Registration' component={Registration} />
@@ -45,7 +47,7 @@ class App extends Component {
     <Route exact path='/ActiveParticipator' component={ActiveParticipator} />
     <Route exact path='/ManagerStartSimulation' component={ManagerStartSimulation} />
     <Route exact path='/ManagerSimulationInAction' component={ManagerSimulationInAction} />
-    <Route exact path='./LoginSignUp' component={LoginSignUp} />
+    <Route exact path='/LoginSignUp' component={LoginSignUp} />
 </Switch>
 </BrowserRouter>
 

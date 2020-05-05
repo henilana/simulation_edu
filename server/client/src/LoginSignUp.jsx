@@ -6,9 +6,10 @@ import SubHeader from './SubHeader'
 function LoginSignUp() {
   return (
    <div>
-          <Header></Header>
-          <SubHeader></SubHeader>
-          <Button></Button>
+          <Header header='ברוכים הבאים'></Header>
+          <SubHeader SubTitle='בבקשה התחברו או הרשמו כדי להמשיך להשתמש באפליקציה שלנו'></SubHeader>
+          <Button link='/LoginSignUp' ButtonName='הרשמה'></Button>
+          <Button link='/LoginSignUp' ButtonName='התחברות'></Button>
    </div>
   );
 }
