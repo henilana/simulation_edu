@@ -3,6 +3,7 @@ import "./App.css";
 import axios from "axios";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { Login, Registration, Logout, CreateOrJoinSimulation, JoinTheSimulation, JoiningError, SimulationLibrary, SimulationLobby, PassiveParticipator, ActiveParticipator, ManagerStartSimulation, ManagerSimulationInAction } from './components/components'
+// import SimButton from "./components/test.jsx";
 
 class App extends Component {
   url = "/api";
@@ -24,13 +25,16 @@ class App extends Component {
   };
 
   render() {
+      
     return (
       <div className="App">
         <p><b>EDUSIM</b> Get Started ! ! !</p>
         <button onClick={this.clickHandler}>Access express server !!!!!</button>
         <p>Got : {this.state.data}</p>
+        
+       
+    
       
-
 <BrowserRouter>
 <Switch>
     <Route exact path='/Login' component={Login} />
@@ -45,7 +49,7 @@ class App extends Component {
     <Route exact path='/ActiveParticipator' component={ActiveParticipator} />
     <Route exact path='/ManagerStartSimulation' component={ManagerStartSimulation} />
     <Route exact path='/ManagerSimulationInAction' component={ManagerSimulationInAction} />
-</Switch>
+ </Switch>
 </BrowserRouter>
 
 </div>
