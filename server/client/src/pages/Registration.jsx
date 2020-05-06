@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import input from "../components/components";
-import button from "../components/components";
+import Input from "../components/Input";
+import Button from "../components/Button";
+import "./Registration.css"
 
 class Registration extends Component {
     state ={UserName:'',isError:'true'}
@@ -14,12 +15,14 @@ class Registration extends Component {
                     <path fill-rule="evenodd" d="M4.5 8a.5.5 0 01.5-.5h6.5a.5.5 0 010 1H5a.5.5 0 01-.5-.5z" clip-rule="evenodd"/>
                 </svg>
                 <h1>הרשמה</h1>
-                <p>הכניסו את שמכם המלא כפי שיופיע באפליקציה</p><br/>
-                
+                <p>הכניסו את שמכם המלא כפי שיופיע באפליקציה</p >
+                <br/>
                 {this.state.isError ? <p style={{ color: 'red' }}>אנא הכנס את שמך המלא*</p> : ""}
-                <input /> <br/>
-                <a href="" style={{ color: 'black' }}>כבר נרשמת? התחבר כאן</a> <br/>
-                <button/>
+                <Input placeholder="שם מלא" />
+                <a href="" style={{ color: 'black' }}>כבר נרשמת? התחבר כאן</a> 
+                <br/>
+                <br/>
+                <Button link='/Login' ButtonName='הבא'></Button>
             </div>
         );
     }
