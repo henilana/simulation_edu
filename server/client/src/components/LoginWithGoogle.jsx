@@ -1,7 +1,9 @@
 import React from "react";
 import {GoogleLogin} from "react-google-login-component";
 
-export default class Google_Login extends React.Component {
+const socialId = "484579547170-8lquvdreveesdmrvt3dmo2hfg9nib8g2.apps.googleusercontent.com";
+
+export default class LoginWithGoogle extends React.Component {
   constructor(props, context) {
     super(props, context);
   }
@@ -19,7 +21,7 @@ export default class Google_Login extends React.Component {
     return (
       <div>
         <GoogleLogin
-          socialId="484579547170-8lquvdreveesdmrvt3dmo2hfg9nib8g2.apps.googleusercontent.com"
+          socialId={socialId}
           className="google-login"
           scope="profile"
           fetchBasicProfile={false}
