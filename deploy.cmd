@@ -15,8 +15,6 @@ IF %ERRORLEVEL% NEQ 0 (
   goto error
 )
 
-DEPLOYMENT_SOURCE=%DEPLOYMENT_SOURCE%\server
-
 echo "-----------------Variables---------------------------------"
 echo "DEPLOYMENT_SOURCE = %DEPLOYMENT_SOURCE%"
 echo "DEPLOYMENT_TARGET = %DEPLOYMENT_TARGET%"
@@ -35,7 +33,7 @@ setlocal enabledelayedexpansion
 SET ARTIFACTS=%~dp0%..\artifacts
 
 IF NOT DEFINED DEPLOYMENT_SOURCE (
-  SET DEPLOYMENT_SOURCE=%~dp0%.
+  SET DEPLOYMENT_SOURCE=%~dp0%\server
 )
 
 IF NOT DEFINED DEPLOYMENT_TARGET (
@@ -75,7 +73,7 @@ IF DEFINED KUDU_SELECT_NODE_VERSION_CMD (
     SET /p NODE_EXE=<"%DEPLOYMENT_TEMP%\__nodeVersion.tmp"
     IF !ERRORLEVEL! NEQ 0 goto error
   )
-
+  
   IF EXIST "%DEPLOYMENT_TEMP%\__npmVersion.tmp" (
     SET /p NPM_JS_PATH=<"%DEPLOYMENT_TEMP%\__npmVersion.tmp"
     IF !ERRORLEVEL! NEQ 0 goto error
