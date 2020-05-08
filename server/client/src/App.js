@@ -30,10 +30,8 @@ class App extends Component {
         <p><b>EDUSIM</b> Get Started ! ! !</p>
         <button onClick={this.clickHandler}>Access express server !!!!!</button>
         <p>Got : {this.state.data}</p>
-      
 
 <BrowserRouter>
-<Link to="/LoginSignUp">click here to go to LoginSignUp Page!</Link>
 <Switch>
     <Route exact path='/Login' component={Login} />
     <Route exact path='/Registration' component={Registration} />
@@ -47,7 +45,7 @@ class App extends Component {
     <Route exact path='/ActiveParticipator' component={ActiveParticipator} />
     <Route exact path='/ManagerStartSimulation' component={ManagerStartSimulation} />
     <Route exact path='/ManagerSimulationInAction' component={ManagerSimulationInAction} />
-    <Route exact path='/LoginSignUp' component={LoginSignUp} />
+    <Route exact path='/' component={LoginSignUp} />
 </Switch>
 </BrowserRouter>
 
