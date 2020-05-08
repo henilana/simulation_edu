@@ -3,7 +3,8 @@ import "./App.css";
 import axios from "axios";
 
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import { Login, Registration, Logout, CreateOrJoinSimulation, JoinTheSimulation, JoiningError, SimulationLobby, PassiveParticipator, ActiveParticipator, ManagerStartSimulation, ManagerSimulationInAction } from './components/components'
+import { Login, Registration, Logout, JoinTheSimulation, JoiningError, SimulationLobby, PassiveParticipator, ActiveParticipator, ManagerStartSimulation, ManagerSimulationInAction } from './components/components'
+import { CreateOrJoinSimulation } from "./components/CreateOrJoinSimulation";
 import SimulationLibrary from './SimulationLibrary';
 import Simulation from './Simulation';
 
@@ -21,11 +22,11 @@ class App extends Component {
     console.log("clicked");
     axios
       .get(this.url)
-      .then(res => {
+      .then((res) => {
         console.log(res.data.res);
         this.setState({ data: res.data.res });
       })
-      .catch(err => console.log(err));
+      .catch((err) => console.log(err));
     // fetch(this.url)
     //   .then(res => res.json())
     //   .then(data => this.setState({data : data.res}))

@@ -4,7 +4,6 @@ import LoginPage from "../pages/LoginPage";
 export const Login = () => <LoginPage/>
 export const Registration = () => <h1>Registration</h1>
 export const Logout = () => <h1>Logout</h1>
-export const CreateOrJoinSimulation = () => <h1>CreateOrJoinSimulation</h1>
 export const JoinTheSimulation = () => <h1>JoinTheSimulation</h1>
 export const JoiningError = () => <h1>JoiningError</h1>
 export const SimulationLibrary = () => <h1>SimulationLibrary</h1>
