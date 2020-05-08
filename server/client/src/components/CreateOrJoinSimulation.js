@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Redirect } from "react-router-dom";
 import MainButton from "./MainButton";
-import HeaderText from "./HeaderText";
+import MainHeader from "./MainHeader";
 
 export class CreateOrJoinSimulation extends Component {
   state = { goTo: "" };
@@ -17,7 +17,7 @@ export class CreateOrJoinSimulation extends Component {
     return (
       <div className="CreateOrJoinSimulation">
         {this.state.goTo ? <Redirect to={`/${this.state.goTo}`} /> : ""}
-        <HeaderText text="כניסה לסימולציה" />
+        <MainHeader headertext="כניסה לסימולציה" />
         <p style={{ fontWeight: 300, color: "rgb(156, 156, 156)" }}>
           {" "}
           מנהל? צור סימולציה חדשה
