@@ -1,7 +1,7 @@
 import React from "react";
 import MicrosoftLogin from "react-microsoft-login";
 
-const clientId = "c17868b5-04f7-48bd-8e2f-5109d5557f07";
+const clientId = "20821fb6-4a64-4168-9dcc-1a2607395d98";
 
 
 export default class LoginWithMicrosoft extends React.Component {
@@ -10,7 +10,7 @@ export default class LoginWithMicrosoft extends React.Component {
   }
 
   authHandler = (err, data) => {
-    console.log(err, data);
+    console.log(err, data.authResponseWithAccessToken.idToken);
     //'redirect_uri' is not valid*********
   };
   render() {
