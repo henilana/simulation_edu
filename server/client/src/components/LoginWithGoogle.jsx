@@ -1,7 +1,8 @@
 import React from "react";
-import {GoogleLogin} from "react-google-login-component";
+import { GoogleLogin } from "react-google-login-component";
 
-const socialId = "484579547170-8lquvdreveesdmrvt3dmo2hfg9nib8g2.apps.googleusercontent.com";
+const socialId =
+  "484579547170-8lquvdreveesdmrvt3dmo2hfg9nib8g2.apps.googleusercontent.com";
 
 export default class LoginWithGoogle extends React.Component {
   constructor(props, context) {
@@ -12,8 +13,8 @@ export default class LoginWithGoogle extends React.Component {
     let id_token = googleUser.getAuthResponse().id_token;
     let googleId = googleUser.getId();
 
-    console.log({googleId});
-    console.log({accessToken: id_token});
+    console.log({ googleId });
+    console.log({ accessToken: id_token });
     //anything else you want to do(save to localStorage)...
   }
 

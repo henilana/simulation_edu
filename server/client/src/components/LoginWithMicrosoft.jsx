@@ -3,7 +3,6 @@ import MicrosoftLogin from "react-microsoft-login";
 
 const clientId = "20821fb6-4a64-4168-9dcc-1a2607395d98";
 
-
 export default class LoginWithMicrosoft extends React.Component {
   constructor(props, context) {
     super(props, context);
@@ -12,6 +11,7 @@ export default class LoginWithMicrosoft extends React.Component {
   authHandler = (err, data) => {
     console.log(err, data.authResponseWithAccessToken.idToken);
   };
+
   render() {
     return (
       <MicrosoftLogin clientId={clientId} authCallback={this.authHandler} />
