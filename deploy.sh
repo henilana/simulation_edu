@@ -35,7 +35,7 @@ selectNodeVersion () {
 echo Handling node.js deployment.
 
 echo setting DEPLOYMENT_SOURCE. Original value = $DEPLOYMENT_SOURCE
-DEPLOYMENT_SOURCE = $DEPLOYMENT_SOURCE/server
+DEPLOYMENT_SOURCE="$DEPLOYMENT_SOURCE/server"
 echo DEPLOYMENT_SOURCE new value = $DEPLOYMENT_SOURCE
 
 # 1. KuduSync
@@ -45,7 +45,8 @@ if [[ "$IN_PLACE_DEPLOYMENT" -ne "1" ]]; then
 fi
 
 # 2. Select node version
-selectNodeVersion
+#selectNodeVersion
+NPM_CMD="node /opt/nodejs/10.14.2/bin/npm"
 
 # 3. Install npm packages
 if [ -e "$DEPLOYMENT_TARGET/package.json" ]; then
