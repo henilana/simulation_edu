@@ -11,7 +11,6 @@ export default class LoginWithMicrosoft extends React.Component {
 
   authHandler = (err, data) => {
     console.log(err, data.authResponseWithAccessToken.idToken);
-    //'redirect_uri' is not valid*********
   };
   render() {
     return (
