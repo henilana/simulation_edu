@@ -1,7 +1,7 @@
 import React from 'react';
-import Button from './Button';
-import Header from './Header';
-import SubHeader from './SubHeader'
+import Button from '../components/Button';
+import Header from '../components/Header';
+import SubHeader from '../components/SubHeader'
 
 function LoginSignUp() {
   return (
@@ -10,9 +10,9 @@ function LoginSignUp() {
           <SubHeader SubTitle='בבקשה התחברו או הרשמו כדי להמשיך להשתמש באפליקציה שלנו'></SubHeader>
           <br/>
                 <h1>Edusim</h1>
-          <Button link='/LoginSignUp' ButtonName='הרשמה'></Button>
+          <Button link='/Registration' ButtonName='הרשמה'></Button>
           <br/>
-          <Button link='/LoginSignUp' ButtonName='התחברות'></Button>
+          <Button link='/Login' ButtonName='התחברות'></Button>
    </div>
   );
 }

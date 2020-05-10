@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "./Simulation.css";
-import Button from './Button';
+import Button from './components/Button';
 
 class Simulation extends Component {   
     constructor(props) {

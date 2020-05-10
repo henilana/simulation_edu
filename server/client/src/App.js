@@ -9,7 +9,7 @@ import { Login, Registration, Logout, JoinTheSimulation, JoiningError, Simulatio
 import { CreateOrJoinSimulation } from "./components/CreateOrJoinSimulation";
 import SimulationLibrary from './SimulationLibrary';
 import Simulation from './Simulation';
-import LoginSignUp from './LoginSignUp'
+import LoginSignUp from './pages/LoginSignUp'
 
 class App extends Component {
   url = "/api";
