@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../components/Button';
+import MyButton from '../components/Button';
 import Header from '../components/Header';
 import SubHeader from '../components/SubHeader'
 
@@ -10,9 +10,9 @@ function LoginSignUp() {
           <SubHeader SubTitle='בבקשה התחברו או הרשמו כדי להמשיך להשתמש באפליקציה שלנו'></SubHeader>
           <br/>
                 <h1>Edusim</h1>
-          <Button link='/Registration' ButtonName='הרשמה'></Button>
+          <MyButton link='/Registration' ButtonName='הרשמה'></MyButton>
           <br/>
-          <Button link='/Login' ButtonName='התחברות'></Button>
+          <MyButton link='/Login' ButtonName='התחברות'></MyButton>
    </div>
   );
 }

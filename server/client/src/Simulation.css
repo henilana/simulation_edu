@@ -45,21 +45,13 @@
 }
 .SimulationButton{
     background-color: white;
+    border-radius: 0.5em;
     margin: auto;
-    margin-top: -10px;
-    border-radius:  10px;  
-    width: 6vw;
-    margin-left: 78vw;
-    padding: 3px;
+    padding-right: 1vw;
 }
-.SimulationButton2{
-    background-color: white;
-    margin: auto;
-    margin-top: -27px;
-    border-radius:  10px;  
-    width: 6vw;
-    margin-left: 70vw;
-    padding: 3px;
+.SimulationButtonContainer{
+    bottom: 0.7rem;
+    padding-right: 5%;
 }
 .SimulationLibrary{
     background-color: rgba(166, 216, 231, 0.288);

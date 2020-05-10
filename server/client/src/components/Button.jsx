@@ -1,15 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import {Button} from 'react-bootstrap'
 
-function Button(props) {
+function MyButton(props) {
     return(
-        <div className="button-container">
+        <div>
               <Link to={props.link}>
-                  <button className="w-25 rounded-0 p-3 btn btn-primary btn-lg">
+                  <Button variant="dark">
                         {props.ButtonName}
-                  </button> 
+                  </Button> 
               </Link>
         </div>
     )
 }
-export default Button;
+export default MyButton;
