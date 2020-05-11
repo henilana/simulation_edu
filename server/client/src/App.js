@@ -3,7 +3,6 @@ import "./App.css";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { Login, Registration, Logout, JoinTheSimulation, JoiningError, SimulationLobby, PassiveParticipator, ActiveParticipator, ManagerStartSimulation, ManagerSimulationInAction } from './components/components'
 import { CreateOrJoinSimulation } from "./components/CreateOrJoinSimulation";
