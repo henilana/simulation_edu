@@ -1,12 +1,15 @@
 import React, { Component } from "react";
 import "./App.css";
 import axios from "axios";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { Login, Registration, Logout, JoinTheSimulation, JoiningError, SimulationLobby, PassiveParticipator, ActiveParticipator, ManagerStartSimulation, ManagerSimulationInAction } from './components/components'
 import { CreateOrJoinSimulation } from "./components/CreateOrJoinSimulation";
 import SimulationLibrary from './SimulationLibrary';
 import Simulation from './Simulation';
+import LoginSignUp from './pages/LoginSignUp'
 
 class App extends Component {
   url = "/api";
@@ -43,6 +46,7 @@ class App extends Component {
 
         <BrowserRouter>
         <Switch>
+        <Route exact path='/' component={LoginSignUp} />
           <Route exact path='/Login' component={Login} />
           <Route exact path='/Registration' component={Registration} />
           <Route exact path='/Logout' component={Logout} />
@@ -52,7 +56,7 @@ class App extends Component {
           <Route exact path='/SimulationLibrary' component = {() => <SimulationLibrary simulationsList = {this.simulationsList} /> }/>         
           <Route path='/Simulation/:id' component={(props) => <Simulation selectedIndex = {props.match.params.id} 
                 simulation = {this.simulationsList[props.match.params.id]} divClassName ={'SimulationLibrary'}
-                button1Link ={'/Simulation/'} button2Link ={'/SimulationLibrary'} SimulationClassName={'SimulationDetail'}
+                button1Link ={'/Simulation/'} button2Link ={'/SimulationLibrary'} SimulationClassName={'SimulationDetail'} descriptionClassName={'text-wrap'}
                 button1Name ={'בחירה'} button2Name = {'חזרה'}/>} /> 
           <Route exact path='/SimulationLobby' component={SimulationLobby} />
           <Route exact path='/PassiveParticipator' component={PassiveParticipator} />

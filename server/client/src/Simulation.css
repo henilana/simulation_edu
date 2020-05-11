@@ -17,6 +17,11 @@
     text-align: right;
     margin-top:-10px;
 }
+
+.description .Simulation{
+    height: 10vh;
+}
+
 .SimulationExtrnal{
     margin: auto;
     padding: 10px; 
@@ -26,9 +31,7 @@
     font-weight: bold;
 }
 .circle{
-    width:3vw;
-    height: 5vh;
-    margin-top: -25px;
+    margin-top: -2em;
     background:white;
     border-radius:  50%;  
     font-size: small;
@@ -45,21 +48,13 @@
 }
 .SimulationButton{
     background-color: white;
+    border-radius: 0.5em;
     margin: auto;
-    margin-top: -10px;
-    border-radius:  10px;  
-    width: 6vw;
-    margin-left: 78vw;
-    padding: 3px;
+    padding-right: 1vw;
 }
-.SimulationButton2{
-    background-color: white;
-    margin: auto;
-    margin-top: -27px;
-    border-radius:  10px;  
-    width: 6vw;
-    margin-left: 70vw;
-    padding: 3px;
+.SimulationButtonContainer{
+    bottom: 0.5rem;
+    padding-right: 7%;
 }
 .SimulationLibrary{
     background-color: rgba(166, 216, 231, 0.288);
