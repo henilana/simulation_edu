@@ -1,0 +1,61 @@
+.Simulation{
+    background-color: rgb(144, 188, 224);
+    width: 94vw;
+    margin: auto;
+    padding: 0.9vw; 
+    border-radius: 25px;   
+    text-align: right;
+    margin-top:-10px;
+}
+.SimulationDetail{
+    background-color: rgb(144, 188, 224);
+    width: 94vw;
+    height:88vh;
+    margin: auto;
+    padding: 0.9vw; 
+    border-radius: 25px;   
+    text-align: right;
+    margin-top:-10px;
+}
+
+.description .Simulation{
+    height: 10vh;
+}
+
+.SimulationExtrnal{
+    margin: auto;
+    padding: 10px; 
+}
+.SimulationName{
+    font-size: large;
+    font-weight: bold;
+}
+.circle{
+    margin-top: -2em;
+    background:white;
+    border-radius:  50%;  
+    font-size: small;
+    padding: 10px 7px 7px 7px;
+}
+.circleTime{
+    margin-left:7vw;
+    float: left;
+    font-size: small;
+}
+.circleParticipants{
+    float: left;
+    margin-left: 2vw;
+}
+.SimulationButton{
+    background-color: white;
+    border-radius: 0.5em;
+    margin: auto;
+    padding-right: 1vw;
+}
+.SimulationButtonContainer{
+    bottom: 0.5rem;
+    padding-right: 7%;
+}
+.SimulationLibrary{
+    background-color: rgba(166, 216, 231, 0.288);
+}
