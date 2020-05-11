@@ -1,28 +1,61 @@
 import React, { Component } from 'react';
 import Input from "../components/Input";
 import Button from "../components/Button";
+import BackButton from '../components/BackButton';
 import "./Registration.css"
+import { Redirect } from 'react-router-dom';
+
 
 class Registration extends Component {
-    state ={UserName:'',isError:'true'}
+    
+    constructor(props) {
+        super(props);
+        this.goBack = this.goBack.bind(this);
+        this.state = { UserName: '',isError:false,redirectToLogin: false };
+    }
+
+    goBack(){
+        this.props.history.goBack();
+    }
+
+    ChangeHandler = (event) => {
+        this.setState({UserName: event.target.value});
+      }
+
+    UserName= () =>{
+        let words = this.state.UserName.trim().split(/\s+/).length;
+        if (words > 1 ){
+            this.setState({ isError: false });
+            console.log(this.state.UserName);
+            this.setState({ redirectToLogin: true })
+        }
+        else{
+            this.setState({ isError: true })
+            this.setState({ redirectToLogin: false })
+        }
+
+          
+    }
     render() {
+        if(this.state.redirectToLogin){
+            return <Redirect to="/Login" />
+        }
         return (
             
             <div>
                 <br/><br/>
-                <svg class="bi bi-arrow-left-short" width="3em" height="3em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" d="M7.854 4.646a.5.5 0 010 .708L5.207 8l2.647 2.646a.5.5 0 01-.708.708l-3-3a.5.5 0 010-.708l3-3a.5.5 0 01.708 0z" clip-rule="evenodd"/>
-                    <path fill-rule="evenodd" d="M4.5 8a.5.5 0 01.5-.5h6.5a.5.5 0 010 1H5a.5.5 0 01-.5-.5z" clip-rule="evenodd"/>
-                </svg>
+                <BackButton onClick={this.goBack}></BackButton>
                 <h1>הרשמה</h1>
                 <p>הכניסו את שמכם המלא כפי שיופיע באפליקציה</p >
                 <br/>
                 {this.state.isError ? <p style={{ color: 'red' }}>אנא הכנס את שמך המלא*</p> : ""}
-                <Input placeholder="שם מלא" />
-                <a href="" style={{ color: 'black' }}>כבר נרשמת? התחבר כאן</a> 
+                <Input       
+                    onChange={this.ChangeHandler}
+                    placeholder="שם מלא" />
+                <a href="/Login" style={{ color: 'black' }}>כבר נרשמת? התחבר כאן</a> 
                 <br/>
                 <br/>
-                <Button link='/Login' ButtonName='הבא'></Button>
+                <Button onClick={this.UserName} ButtonName='הבא'></Button>
             </div>
         );
     }

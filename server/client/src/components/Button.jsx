@@ -5,7 +5,7 @@ function Button(props) {
     return(
         <div className="button-container">
               <Link to={props.link}>
-                  <button class="btn btn-dark btn">
+                  <button class="btn btn-dark btn" onClick={props.onClick}>
                         {props.ButtonName}
                   </button> 
               </Link>

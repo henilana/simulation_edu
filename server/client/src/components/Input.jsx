@@ -6,7 +6,9 @@ function Input(props) {
 
         return (
             <div>
-                <input type="text"  placeholder={props.placeholder} size="70" ></input>
+                <input
+                type="text" onChange={props.onChange}  placeholder={props.placeholder} size="70" >
+                </input>
             </div>
         );
 }
