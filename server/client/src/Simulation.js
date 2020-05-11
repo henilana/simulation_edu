@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "./Simulation.css";
-import MyButton from './components/Button';
+import MyButton from './components/MyButton';
 import Container from 'react-bootstrap/Container'
 
 class Simulation extends Component {
