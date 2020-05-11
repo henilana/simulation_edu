@@ -5,9 +5,12 @@ import "./SimulationLibrary.css";
 class SimulationLibrary extends Component {
 
     render() {
-        const element = this.props.simulationsList.map ( (simulationsList,index) =>(
+        const element = this.props.simulationsList.map ( (simulationsItem,index) =>(
             <div key={index} >
-                <Simulation simulation = {simulationsList} SimulationClassName={'Simulation'}
+                <Simulation 
+                    simulation = {simulationsItem} 
+                    SimulationClassName={'Simulation'}
+                    descriptionClassName={'text-truncate'}
                     selectedIndex = {index} divClassName = {''} 
                     button1Link ={'/Simulation/'} button2Link ={'/Simulation/'}
                     button1Name ={'פירוט'} button2Name = {'בחר'}/>

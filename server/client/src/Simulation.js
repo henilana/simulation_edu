@@ -17,9 +17,8 @@ class Simulation extends Component {
                     <span className="circle circleTime">{this.props.simulation.Time} זמן</span>
                     <span className="circle circleParticipants">{this.props.simulation.Participants} שחקנים</span>
                     <div className={this.props.SimulationClassName} >
-                        <span className="SimulationName">{this.props.simulation.Name}</span><br />
-                        <span>{this.props.simulation.Desc}</span>
-
+                        <h1 className="SimulationName">{this.props.simulation.Name}</h1>
+                        <p className={this.props.descriptionClassName+' '+ 'description'}>{this.props.simulation.Desc}</p>
                     </div>
                     <Container fluid className="d-flex justify-content-end position-relative SimulationButtonContainer">
                         <MyButton link={RedirectToSimulationDetails} ButtonName={this.props.button1Name} />

@@ -56,7 +56,7 @@ class App extends Component {
           <Route exact path='/SimulationLibrary' component = {() => <SimulationLibrary simulationsList = {this.simulationsList} /> }/>         
           <Route path='/Simulation/:id' component={(props) => <Simulation selectedIndex = {props.match.params.id} 
                 simulation = {this.simulationsList[props.match.params.id]} divClassName ={'SimulationLibrary'}
-                button1Link ={'/Simulation/'} button2Link ={'/SimulationLibrary'} SimulationClassName={'SimulationDetail'}
+                button1Link ={'/Simulation/'} button2Link ={'/SimulationLibrary'} SimulationClassName={'SimulationDetail'} descriptionClassName={'text-wrap'}
                 button1Name ={'בחירה'} button2Name = {'חזרה'}/>} /> 
           <Route exact path='/SimulationLobby' component={SimulationLobby} />
           <Route exact path='/PassiveParticipator' component={PassiveParticipator} />

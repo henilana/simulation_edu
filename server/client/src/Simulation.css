@@ -17,6 +17,11 @@
     text-align: right;
     margin-top:-10px;
 }
+
+.description .Simulation{
+    height: 10vh;
+}
+
 .SimulationExtrnal{
     margin: auto;
     padding: 10px; 
@@ -26,9 +31,7 @@
     font-weight: bold;
 }
 .circle{
-    width:3vw;
-    height: 5vh;
-    margin-top: -25px;
+    margin-top: -2em;
     background:white;
     border-radius:  50%;  
     font-size: small;
