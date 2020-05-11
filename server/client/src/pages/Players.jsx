@@ -1,90 +1,93 @@
 import React, { Component } from "react";
 import "./Players.css";
+import axios from "axios";
+// TO DO :
+// 1.handle RTL-LTR
+// 2.handle error message
+// https://github.com/garageil/simulation_edu
+// https://trello.com/b/AKkIV8Vr/edusim-lodigital
 
 class Players extends Component {
   url = "/chooserole";
-  userName = "";
 
   state = {
     // Temporary simulation:
-    simulation: [
-      { uuid: "1234", role: "student 1", playerName: "" },
-      { uuid: "1234", role: "student 2", playerName: "Michal" },
-      { uuid: "1234", role: "student 3", playerName: "" },
-      { uuid: "1234", role: "teacher 1", playerName: "Noa" },
-      { uuid: "1234", role: "teacher 2", playerName: "" },
-    ],
-    currentSelectionIndex: -1,
-    previousSelectionIndex: -1,
+    simulation: [],
+    currentSelectionID: "",
+    previousSelectionID: "",
     serverStatus: 200,
   };
 
-  constructor(props) {
-    super(props);
-    this.userName = props.userName;
-  }
+  // constructor(props) {
+  //   super(props);
+  //  }
 
   componentWillMount() {
     this.getUpdatedSimulation();
   }
-  getUpdatedSimulation = () => {
-    /*
-    this.setState({ serverStatus: 200 });
-  axios
-      .post(this.url, {
-         uuid:this.props.uuid,
-         user: this.props.user,
-         role:currentSelectionIndex
-      })
-      .then(res => {
-         if (res.status === 200) {
-          this.setState({ previousSelectionIndex: this.state.currentSelectionIndex ,serverStatus:200});
-        }
-        if (res.status === 404) {
-           this.setState({ serverStatus:404});
-           this.setState({ currentSelectionIndex: this.state.previousSelectionIndex}
-        }
-         else {//set error msg according error number
-          //this.setState({msg:'error'})
+  getUpdatedSimulation() {
+    axios
+      .get("/chooserole/get?UUID=" + this.props.UUID)
+      .then((res) => {
+        if (res.status === 200) {
+          this.setState({ simulation: res.data });
+          //prevent slecetd twice after refreshing
+          this.setState({currentSelectionID:res.data.find(x => x.playerName === this.props.userName)._id});
+        } else {
+          console.log("error");
         }
       })
-      .catch(err => {
-       //??
-      });*/
+      .catch((err) => {
+        console.log(err);
+      });
+  }
+  updateSimulation = (_id, playerName) => {
+    axios
+      .put("chooserole/update", {
+        UUID: this.props.UUID,
+        _id: _id, //this.state.simulation[i].role,
+        playerName: playerName,
+      })
+      .then((res) => {
+        if (res.status === 200) {
+          this.getUpdatedSimulation();
+        } else {
+          this.getUpdatedSimulation();
+          console.log(res.status);
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+        this.getUpdatedSimulation();
+      });
   };
-  handleOptionChange = (changeEvent) => {
-    let tmpSimulation = [...this.state.simulation];
-    let objIndex = tmpSimulation.findIndex(
-      (obj) => obj.role === changeEvent.target.value
-    );
 
-    tmpSimulation[objIndex].playerName = this.userName;
-    if (this.state.currentSelectionIndex > -1) {
-      tmpSimulation[this.state.currentSelectionIndex].playerName = "";
+  handleOptionChange = (_id) => (changeEvent) => {
+    // reset previous choise
+    if (this.state.currentSelectionID !== "") {
+      this.updateSimulation(this.state.currentSelectionID, "");
     }
-
     this.setState({
-      previousSelectionIndex: this.state.currentSelectionIndex,
-      currentSelectionIndex: objIndex,
-      simulation: tmpSimulation,
+      previousSelectionID: this.state.currentSelectionID,
+      currentSelectionID: _id,
     });
+    this.updateSimulation(_id, this.props.userName);
   };
   render() {
     return (
       <div dir="rtl" className="playersPadding" style={{ textAlign: "right" }}>
         {this.state.simulation.map((item, i) => (
-          <div className="radio" key={item.role}>
+          <div className="radio" key={item._id}>
             {/* <Player uuid={item.uuid} role={item.role} playerName={item.playerName}/> */}
             <label>
               <input
                 type="radio"
                 value={item.role}
-                key={item.role}
+                id={item._id}
                 checked={
-                  this.state.currentSelectionIndex === item.role ||
-                  item.playerName
+                  this.state.currentSelectionID === item._id || item.playerName
                 }
-                onChange={this.handleOptionChange}
+                onChange={this.handleOptionChange(item._id)}
                 disabled={
                   item.playerName && item.playerName !== this.props.userName
                 }
