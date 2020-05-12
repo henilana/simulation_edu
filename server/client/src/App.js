@@ -3,6 +3,7 @@ import "./App.css";
 import axios from "axios";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import { Login, Registration, Logout, CreateOrJoinSimulation, JoinTheSimulation, JoiningError, SimulationLibrary, SimulationLobby, PassiveParticipator, ActiveParticipator, ManagerStartSimulation, ManagerSimulationInAction } from './components/components'
+import "bootstrap/dist/css/bootstrap.min.css";
 
 class App extends Component {
   url = "/api";

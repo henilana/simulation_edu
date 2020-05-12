@@ -1,0 +1,9 @@
+.header{
+    margin: 2vw;
+}
+.title{
+    font-size: calc(18px + 0.5vw);
+}
+.desc{
+    font-size: calc(12px + 0.5vw);
+}

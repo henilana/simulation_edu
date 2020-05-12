@@ -41,7 +41,7 @@
 //   render() {
 //     return (
 //       <div onClick={this.radioButtonHandler} style={{textAlign:'right'}}>
-//         <div style={{ display: "inline-block" ,marginTop:'5px'}}>
+//         <div {{ display: "inline-block" ,marginTop:'5px'}}>
 //           <span style={{marginTop: '-0.5vw'}} style={{verticalAlign:'text-bottom'}}>
 //           {this.state.active ? (
 //             <box-icon name="radio-circle-marked"  />

@@ -4,6 +4,7 @@ import axios from "axios";
 // TO DO :
 // 1.handle RTL-LTR
 // 2.handle error message
+// 3.handle user authentication and user name
 // https://github.com/garageil/simulation_edu
 // https://trello.com/b/AKkIV8Vr/edusim-lodigital
 
@@ -92,6 +93,7 @@ class Players extends Component {
                   item.playerName && item.playerName !== this.props.userName
                 }
               />
+              <span> </span>
               {item.playerName ? <span>{item.playerName} - </span> : ""}
               <span>{item.role}</span>
             </label>
